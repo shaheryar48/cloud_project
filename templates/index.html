@@ -1,0 +1,37 @@
+<!DOCTYPE html> <html> <head> <title>Store Data</title> <style> body { font-family: Arial, sans-serif; background-color: 
+            #f2f2f2;
+            margin: 0; padding: 0;
+        }
+        .container { max-width: 400px; margin: 50px auto; background-color: #fff; padding: 20px; border-radius: 8px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 { text-align: center;
+        }
+        form { display: flex; flex-direction: column;
+        }
+        label { font-weight: bold; margin-bottom: 5px;
+        }
+        input[type="text"] { padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; transition: 
+            border-color 0.3s ease;
+        }
+        input[type="text"]:focus { outline: none; border-color: #66afe9;
+        }
+        input[type="submit"] { padding: 10px 20px; background-color: #007bff; color: #fff; border: none; border-radius: 5px; 
+            cursor: pointer; transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover { background-color: #0056b3;
+        }
+        /* Styling for success message */ .success-message { color: #28a745; /* Green color */ margin-top: 10px; font-size: 
+            16px; text-align: center;
+        }
+    </style> </head> <body> <div class="container"> <h1>Store Data</h1> <form method="POST" action="/store_data"> <label 
+            for="input1">Input 1:</label> <input type="text" id="input1" name="input1" required>
+            
+            <label for="input2">Input 2:</label> <input type="text" id="input2" name="input2" required>
+            
+            <label for="input3">Input 3:</label> <input type="text" id="input3" name="input3" required>
+            
+            <input type="submit" value="Submit"> </form> {% if success_message %} <p class="success-message">{{ success_message 
+            }}</p>
+        {% endif %} </div> </body>
+</html>
